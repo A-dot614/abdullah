@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',function () {return view('site.index');})->name('home');
 Route::get('/contact', function () {return view('site.contact');})->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::get('/services', function () {return view('site.service');})->name('service');
 Route::get('/about', function () {return view('site.about');})->name('about');
 Route::get('/projects', function () {return view('site.project');})->name('project');
