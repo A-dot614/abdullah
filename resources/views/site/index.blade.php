@@ -15,8 +15,8 @@
                     Full-Stack Developer crafting high-performance digital experiences with <span class="text-[#e0e1dd] font-semibold underline decoration-[#E05A47]">Laravel & modern web stacks</span>.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-[#E05A47] text-white rounded-full font-bold hover:bg-[#c44e3e] shadow-lg shadow-[#E05A47]/20 transition-all hover:scale-105">View Projects</a>
-                    <a href="#contact" class="px-8 py-4 border border-[#415a77] rounded-full font-bold hover:border-[#e0e1dd] transition-all">Let's Talk</a>
+                    <a href="{{ route('project') }}" class="px-8 py-4 bg-[#E05A47] text-white rounded-full font-bold hover:bg-[#c44e3e] shadow-lg shadow-[#E05A47]/20 transition-all hover:scale-105">View Projects</a>
+                    <a href="{{ route('contact') }}" class="px-8 py-4 border border-[#415a77] rounded-full font-bold hover:border-[#e0e1dd] transition-all">Let's Talk</a>
                 </div>
             </div>
 
@@ -89,10 +89,10 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <a href="" class="px-10 py-4 bg-white text-[#0d1b2a] font-bold rounded-2xl hover:bg-gray-200 transition-all hover:scale-105">
+            <a href="{{ route('booking') }}" class="px-10 py-4 bg-white text-[#0d1b2a] font-bold rounded-2xl hover:bg-gray-200 transition-all hover:scale-105">
                 Schedule a Call →
             </a>
-            <a href="#contact-form" class="px-10 py-4 border border-white/20 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
+            <a href="{{ route('contact') }}" class="px-10 py-4 border border-white/20 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">
                 Send a Message
             </a>
         </div>

@@ -2,16 +2,17 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProtfolioController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',function () {return view('site.index');})->name('home');
-Route::get('/contact', function () {return view('site.contact');})->name('contact');
+Route::get('/',[ProtfolioController::class, 'index'])->name('home');
+Route::get('/contact', [ProtfolioController::class, 'contact'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
-Route::get('/services', function () {return view('site.service');})->name('service');
-Route::get('/about', function () {return view('site.about');})->name('about');
-Route::get('/projects', function () {return view('site.project');})->name('project');
-Route::get('/projects/detail', function () {return view('site.detail');})->name('project.detail');
-Route::get('/booking', function () {return view('site.booking');})->name('booking');
+Route::get('/services',[ProtfolioController::class, 'services'])->name('service');
+Route::get('/about', [ProtfolioController::class, 'about'])->name('about');
+Route::get('/projects', [ProtfolioController::class, 'projects'])->name('project');
+Route::get('/projects/detail', [ProtfolioController::class, 'show'])->name('project.detail');
+Route::get('/booking',[ProtfolioController::class, 'booking'])->name('booking');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

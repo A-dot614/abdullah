@@ -11,19 +11,19 @@
                 </div>
                 
                 <!-- Filters -->
-                <div class="flex flex-wrap gap-2">
+                <!-- <div class="flex flex-wrap gap-2">
                     @foreach(['All', 'Web', 'Apps', 'Dashboards'] as $filter)
                         <button class="px-6 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest border transition-all 
                             {{ $loop->first ? 'bg-[#E05A47] border-[#E05A47] text-white shadow-lg shadow-[#E05A47]/20' : 'border-[#415a77] text-[#778da9] hover:bg-[#1b263b] hover:border-[#E05A47] hover:text-white' }}">
                             {{ $filter }}
                         </button>
                     @endforeach
-                </div>
+                </div> -->
             </div>
 
             <!-- Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                @for($i = 1; $i <= 6; $i++)
+                @forelse($projects as $project)
                 <div class="group bg-[#1b263b]/40 p-4 rounded-[2.5rem] border border-[#415a77] hover:border-[#415a77]/80 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30">
                     <!-- Thumbnail -->
                     <div class="relative overflow-hidden rounded-[2rem] aspect-[16/11] mb-6">
@@ -45,12 +45,16 @@
                         <p class="text-sm text-[#778da9] mb-6 leading-relaxed line-clamp-2">High-performance dashboard built with Laravel, Tailwind, and React architecture.</p>
                         
                         <div class="flex gap-4 text-[#778da9]">
-                            <a href="#" class="hover:text-[#E05A47] transition-colors"><i class="fa-regular fa-eye"></i></a>
-                            <a href="#" class="hover:text-[#E05A47] transition-colors"><i class="fa-brands fa-github"></i></a>
+                            <a href="{{ route('project.detail', $project->id) }}" class="hover:text-[#E05A47] transition-colors"><i class="fa-regular fa-eye"></i></a>
+                            <!-- <a href="#" class="hover:text-[#E05A47] transition-colors"><i class="fa-brands fa-github"></i></a> -->
                         </div>
                     </div>
                 </div>
-                @endfor
+                @empty
+                <div class="col-span-full text-center py-16">
+                    <p class="text-[#778da9] text-lg">No projects available yet.</p>
+                </div>
+                @endforelse
             </div>
 
             <!-- CTA Section -->
@@ -59,7 +63,7 @@
                 <div class="relative z-10">
                     <h3 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Ready to start your project?</h3>
                     <p class="text-lg text-[#778da9] mb-10 max-w-lg mx-auto">Let's collaborate to build something impactful that stands out in the digital space.</p>
-                    <a href="#contact" class="inline-flex items-center gap-3 bg-[#E05A47] text-white px-10 py-4 rounded-full font-bold hover:bg-[#c44e3e] transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#E05A47]/20">
+                    <a href="{{ route('contact') }}" class="inline-flex items-center gap-3 bg-[#E05A47] text-white px-10 py-4 rounded-full font-bold hover:bg-[#c44e3e] transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#E05A47]/20">
                         Start a Project <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>

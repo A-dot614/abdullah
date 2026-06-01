@@ -25,8 +25,8 @@
                     I'm a full-stack developer with 2+ years of experience in building scalable web applications. I specialize in the Laravel/PHP ecosystem, paired with modern frontend frameworks and responsive UI design.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#" class="px-8 py-4 bg-[#E05A47] text-white rounded-full font-bold shadow-lg shadow-[#E05A47]/20 hover:bg-[#c44e3e] transition-all hover:scale-105">Download CV</a>
-                    <a href="#contact" class="px-8 py-4 border border-[#415a77] rounded-full font-bold hover:border-[#E05A47] hover:text-[#E05A47] transition-all">Let's Connect</a>
+                    <!-- <a href="#" class="px-8 py-4 bg-[#E05A47] text-white rounded-full font-bold shadow-lg shadow-[#E05A47]/20 hover:bg-[#c44e3e] transition-all hover:scale-105">Download CV</a> -->
+                    <a href="{{ route('contact') }}" class="px-8 py-4 border border-[#415a77] rounded-full font-bold hover:border-[#E05A47] hover:text-[#E05A47] transition-all">Let's Connect</a>
                 </div>
             </div>
         </div>

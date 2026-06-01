@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Protfolio;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class ProtfolioSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Protfolio::factory(1)->create();
     }
 }
