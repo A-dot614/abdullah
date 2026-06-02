@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookingFormRequest;
 use App\Http\Requests\StoreProtfolioRequest;
 use App\Http\Requests\UpdateProtfolioRequest;
+use App\Mail\ContactSubmissionAdmin;
+use App\Mail\ContactSubmissionConfirmation;
 use App\Models\Protfolio;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ProtfolioController extends Controller
 {
@@ -85,5 +91,45 @@ class ProtfolioController extends Controller
         return view('site.booking');
     }
 
+    public function bookingDate(Request $request)
+    {
+        $type = $request->query('type');
 
+        if (!in_array($type, ['Discovery Call', 'Consulting Session'], true)) {
+            return redirect()->route('booking');
+        }
+
+        return view('site.celender', ['selectedType' => $type]);
+    }
+
+    public function bookingDetails(Request $request)
+    {
+        $type = $request->query('type');
+        $date = $request->query('date');
+        $time = $request->query('time');
+
+        if (!$type || !$date || !$time) {
+            return redirect()->route('booking');
+        }
+
+        return view('site.detailcontact', [
+            'selectedType' => $type,
+            'selectedDate' => $date,
+            'selectedTime' => $time,
+        ]);
+    }
+
+    public function submitBooking(BookingFormRequest $request): RedirectResponse
+    {
+        $data = $request->validated();
+        $data['budget'] = $data['budget'] ?? null;
+        $data['source'] = $data['source'] ?? null;
+
+        $adminEmail = config('mail.admin_address', config('mail.from.address'));
+
+        Mail::to($adminEmail)->send(new ContactSubmissionAdmin($data));
+        Mail::to($data['email'])->send(new ContactSubmissionConfirmation($data));
+
+        return redirect()->route('booking')->with('status', 'Thanks! Your booking request has been sent. Please check your email.');
+    }
 }

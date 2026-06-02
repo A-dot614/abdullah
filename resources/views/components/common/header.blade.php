@@ -29,7 +29,7 @@
 
         <!-- CTA Action -->
         <div class="hidden md:flex items-center">
-            <a href="{{ route('booking') }}" class="bg-[#E05A47] text-white text-xs font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full hover:bg-[#c44e3e] transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-[#E05A47]/20 hover:scale-105 active:scale-95">
+            <a href="{{ route('contact') }}" class="bg-[#E05A47] text-white text-xs font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full hover:bg-[#c44e3e] transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-[#E05A47]/20 hover:scale-105 active:scale-95">
                 <i class="fa-regular fa-calendar-days"></i>
                 <span>Book a Call</span>
             </a>

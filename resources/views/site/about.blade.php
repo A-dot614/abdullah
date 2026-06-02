@@ -15,14 +15,14 @@
             <div class="relative group" data-aos="fade-right">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-[#E05A47] to-[#0d1b2a] rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition-all duration-700"></div>
                 <div class="relative rounded-[2.5rem] overflow-hidden border border-[#415a77] aspect-[4/5] shadow-2xl">
-                    <img src="{{ asset('frontend.png') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105">
+                    <img src="{{ asset('frontend.jpeg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105">
                 </div>
             </div>
 
             <div class="space-y-8" data-aos="fade-left">
                 <h2 class="text-4xl font-bold tracking-tight">Bridging Design & Code.</h2>
                 <p class="text-lg text-[#778da9] leading-relaxed">
-                    I'm a full-stack developer with 2+ years of experience in building scalable web applications. I specialize in the Laravel/PHP ecosystem, paired with modern frontend frameworks and responsive UI design.
+                    I'm a full-stack developer with 1+ years of experience in building scalable web applications. I specialize in the Laravel/PHP ecosystem, paired with modern frontend frameworks and responsive UI design.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <!-- <a href="#" class="px-8 py-4 bg-[#E05A47] text-white rounded-full font-bold shadow-lg shadow-[#E05A47]/20 hover:bg-[#c44e3e] transition-all hover:scale-105">Download CV</a> -->
@@ -40,10 +40,8 @@
                 
                 @php 
                     $journey = [
-                        ['2024', 'Professional Growth', 'Freelancing, client projects, and mastering UI/UX methodologies.'],
-                        ['2022', 'Full-Stack Shift', 'Deepened expertise in Laravel, databases, and RESTful architecture.'],
-                        ['2021', 'Frontend Focus', 'Mastered React/Vue and component-based design systems.'],
-                        ['2020', 'Foundation', 'Building the core understanding of HTML, CSS, and JS.']
+                        ['2025', 'Professional Growth', 'Freelancing, client projects, and mastering UI/UX methodologies.'],
+                        
                     ];
                 @endphp
                 @foreach($journey as $item)
@@ -69,11 +67,9 @@
                 'HTML5'      => 'fa-html5',
                 'Tailwind'   => 'fa-css3',
                 'JavaScript' => 'fa-js',
-                'React'      => 'fa-react',
-                'Node.js'    => 'fa-node-js',
                 'Laravel'    => 'fa-laravel',
                 'MySQL'      => 'fa-database',
-                'Git'        => 'fa-github'
+
             ];
         @endphp
 

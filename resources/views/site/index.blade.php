@@ -24,7 +24,7 @@
             <div class="relative group" data-aos="fade-left">
                 <div class="absolute -inset-1 bg-gradient-to-br from-[#E05A47] to-[#0d1b2a] rounded-[2.5rem] blur opacity-40 group-hover:opacity-70 transition duration-1000"></div>
                 <div class="relative w-72 h-96 rounded-[2.5rem] overflow-hidden border border-[#415a77] bg-[#1b263b]">
-                    <img src="{{ asset('frontend.png') }}" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition duration-700 hover:scale-110">
+                    <img src="{{ asset('frontend.jpeg') }}" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition duration-700 hover:scale-110">
                 </div>
             </div>
         </section>
@@ -56,18 +56,29 @@
         <section id="projects" class="py-24 border-t border-[#415a77]">
             <h2 class="text-5xl font-bold tracking-tighter mb-16" data-aos="fade-up">Featured Projects<span class="text-[#E05A47]">.</span></h2>
             <div class="grid md:grid-cols-2 gap-8">
-                @for($i = 0; $i < 4; $i++)
-                <div class="group bg-[#1b263b]/50 p-5 rounded-[2rem] border border-[#415a77] hover:border-[#E05A47]/50 transition-all duration-500" data-aos="fade-up" data-aos-delay="{{ $i * 100 }}">
+               
+                <div class="group bg-[#1b263b]/50 p-5 rounded-[2rem] border border-[#415a77] hover:border-[#E05A47]/50 transition-all duration-500" data-aos="fade-up" data-aos-delay="">
                     <div class="overflow-hidden rounded-[1.5rem] aspect-video mb-6">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{asset('project/CRM.jpeg')}}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="px-2">
-                        <h3 class="text-xl font-bold mb-2">Modern SaaS Platform</h3>
+                        <h3 class="text-xl font-bold mb-2">CRM System</h3>
                         <p class="text-sm text-[#778da9] mb-6">High-performance dashboard built with Laravel, Inertia, and Tailwind.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#E05A47] hover:gap-4 transition-all">View Project →</a>
+                        <a href="{{ route('project') }}" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#E05A47] hover:gap-4 transition-all">View Project →</a>
                     </div>
                 </div>
-                @endfor
+               
+                <div class="group bg-[#1b263b]/50 p-5 rounded-[2rem] border border-[#415a77] hover:border-[#E05A47]/50 transition-all duration-500" data-aos="fade-up" data-aos-delay="">
+                    <div class="overflow-hidden rounded-[1.5rem] aspect-video mb-6">
+                        <img src="{{asset('project/AI_learn.jpeg')}}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold mb-2">AI Learning Platform</h3>
+                        <p class="text-sm text-[#778da9] mb-6">High-performance dashboard built with Laravel, Inertia, and Tailwind.</p>
+                        <a href="{{ route('project') }}" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#E05A47] hover:gap-4 transition-all">View Project →</a>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
@@ -89,7 +100,7 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <a href="{{ route('booking') }}" class="px-10 py-4 bg-white text-[#0d1b2a] font-bold rounded-2xl hover:bg-gray-200 transition-all hover:scale-105">
+            <a href="{{ route('contact') }}" class="px-10 py-4 bg-white text-[#0d1b2a] font-bold rounded-2xl hover:bg-gray-200 transition-all hover:scale-105">
                 Schedule a Call →
             </a>
             <a href="{{ route('contact') }}" class="px-10 py-4 border border-white/20 text-white font-bold rounded-2xl hover:bg-white/10 transition-all">

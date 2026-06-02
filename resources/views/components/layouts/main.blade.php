@@ -33,6 +33,18 @@
         }
     </script>
     <style>
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #1b263b;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #415a77;
+    border-radius: 10px;
+}        
+
+
         .glass { background: rgba(13, 27, 42, 0.7); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(65, 90, 119, 0.3); }
         .gradient-text { background: linear-gradient(90deg, #E05A47, #ff8c7a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         ::-webkit-scrollbar { width: 8px; }
@@ -77,7 +89,7 @@
     </footer>
 
     <!-- Modern WhatsApp Button -->
-<a href="https://wa.me/1234567890" target="_blank" 
+<a href="https://wa.me/+923029659483" target="_blank" 
    class="fixed bottom-8 right-8 z-50 group flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-lg animate-pulse-whatsapp hover:scale-110 transition-all duration-300">
     <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
     <span class="absolute right-full mr-4 bg-navy-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity text-sm whitespace-nowrap shadow-xl">Let's Talk</span>

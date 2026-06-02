@@ -12,7 +12,10 @@ Route::get('/services',[ProtfolioController::class, 'services'])->name('service'
 Route::get('/about', [ProtfolioController::class, 'about'])->name('about');
 Route::get('/projects', [ProtfolioController::class, 'projects'])->name('project');
 Route::get('/projects/detail', [ProtfolioController::class, 'show'])->name('project.detail');
-Route::get('/booking',[ProtfolioController::class, 'booking'])->name('booking');
+Route::get('/booking', [ProtfolioController::class, 'booking'])->name('booking');
+Route::get('/booking/date', [ProtfolioController::class, 'bookingDate'])->name('booking.date');
+Route::get('/booking/details', [ProtfolioController::class, 'bookingDetails'])->name('booking.details');
+Route::post('/booking', [ProtfolioController::class, 'submitBooking'])->name('booking.submit');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

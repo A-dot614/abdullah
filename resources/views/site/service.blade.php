@@ -18,7 +18,7 @@
                 ['server', 'Backend Dev', 'Robust architecture with secure, scalable APIs.'],
                 ['layer-group', 'Full-Stack', 'End-to-end solutions from concept to deployment.'],
                 ['shopping-cart', 'E-Commerce', 'Seamless shopping experiences with secure payment integration.'],
-                ['mobile-screen', 'Mobile App', 'Cross-platform apps optimized for mobile users.']
+   
             ] as $service)
             <div class="group p-8 rounded-[2.5rem] bg-[#1b263b]/50 border border-[#415a77] hover:border-[#E05A47]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#E05A47]/5 hover:-translate-y-2">
                 <div class="w-16 h-16 rounded-3xl bg-[#0d1b2a] text-[#E05A47] flex items-center justify-center text-2xl mb-8 group-hover:bg-[#E05A47] group-hover:text-white transition-all duration-500 shadow-inner">

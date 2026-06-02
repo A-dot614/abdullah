@@ -123,13 +123,13 @@
             </div>
         </div>
 
-        <!-- Video Call -->
+        <!-- Video Call 
         <div class="p-8 rounded-[2.5rem] bg-[#1b263b]/50 border border-[#415a77]">
             <div class="text-[#E05A47] text-2xl mb-4"><i class="fa-solid fa-calendar"></i></div>
             <h3 class="font-bold mb-2">Prefer a Video Call?</h3>
             <p class="text-sm text-[#778da9] mb-6">Book a free 30-minute consultation to discuss your project in detail.</p>
             <a href="#" class="block text-center py-4 bg-white text-[#0d1b2a] font-bold rounded-2xl hover:bg-gray-200 transition-all">Schedule a Call</a>
-        </div>
+        </div>  -->
     </div>
 </div>
         <!-- Terminal Footer -->
