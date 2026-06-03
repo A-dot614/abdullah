@@ -40,7 +40,7 @@
                 
                 @php 
                     $journey = [
-                        ['2025', 'Professional Growth', 'Freelancing, client projects, and mastering UI/UX methodologies.'],
+                        ['2026', 'Professional Growth', 'Freelancing, client projects, and mastering UI/UX methodologies.'],
                         
                     ];
                 @endphp

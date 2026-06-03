@@ -11,7 +11,7 @@
                 </a>
                 <p class="text-sm leading-relaxed text-[#778da9]">Full-stack developer & entrepreneur building scalable digital products that drive results.</p>
                 <div class="flex space-x-3">
-                    @php $socials = ['instagram' => '#', 'linkedin-in' => '#', 'github' => '#']; @endphp
+                    @php $socials = ['instagram' => 'https://www.instagram.com/a_dot614?igsh=djY3dnExYjB6dDVk', 'linkedin-in' => 'https://www.linkedin.com/in/abdullah-bin-mumtaz-70a98b382/', 'github' => 'https://github.com/A-dot614']; @endphp
                     @foreach($socials as $icon => $url)
                         <a href="{{ $url }}" class="w-10 h-10 rounded-full bg-[#1b263b] flex items-center justify-center text-[#e0e1dd] hover:bg-[#E05A47] hover:text-white transition-all duration-300 hover:scale-110">
                             <i class="fa-brands fa-{{ $icon }}"></i>

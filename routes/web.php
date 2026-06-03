@@ -17,7 +17,7 @@ Route::get('/booking/date', [ProtfolioController::class, 'bookingDate'])->name('
 Route::get('/booking/details', [ProtfolioController::class, 'bookingDetails'])->name('booking.details');
 Route::post('/booking', [ProtfolioController::class, 'submitBooking'])->name('booking.submit');
 
-Route::get('/dashboard', function () {
+Route::get('///dajkgshboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
